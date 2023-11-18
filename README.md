@@ -5,11 +5,8 @@ The custom instruction set used for this simulator is:
 ![image](https://github.com/anr2311/Instruction_Set_Simulator/assets/72514473/a6db2e5f-490d-423b-a310-1372be330006)
 
 The instruction set simulator works on the following program:
-char a = 25; //The variable value is a representation. Ideally in your executable, treat 'a' and 'b' as a variable
-char b = 40;
-char c = 0; //initialize 'c' to '0'
-if (a < b) c = 25;
-if (a > b) c = 40;
+![image](https://github.com/anr2311/Instruction_Set_Simulator/assets/72514473/fbc7adcb-8b43-4760-99f5-e56abb7d0fa4)
+
 
 The assembly equivalent of the above program (some considerations taken for ease of converting into machine level code):
 ![image](https://github.com/anr2311/Instruction_Set_Simulator/assets/72514473/b93a83ec-51f6-4660-be46-2526fe6f2152)
