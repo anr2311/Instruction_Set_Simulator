@@ -12,20 +12,7 @@ if (a < b) c = 25;
 if (a > b) c = 40;
 
 The assembly equivalent of the above program (some considerations taken for ease of converting into machine level code):
-       MOV R0, #25
-       MOV R4, #25 ;storing the same data in a redundant register
-       MOV R1, #40
-       MOV R5, #40 ;storing the same data in a redundant register
-       MOV R2, #5 ;storing the HCF of the above data in another register
-Loop:  SUB R0, R2
-       JZ R0, LESS
-       SUB R1, R2
-       JZ R1, GREAT
-       JZ R3, Loop
-LESS:  MOV 0x01, R4 ;if the comparison operation results in a < b, result stored in memory ‘c’
-       STOP
-GREAT: MOV 0x01, R5 ;if the comparison operation results in a > b, result stored in memory ‘c’
-       STOP
+![image](https://github.com/anr2311/Instruction_Set_Simulator/assets/72514473/b93a83ec-51f6-4660-be46-2526fe6f2152)
 
 
 The following machine instructions are part of the 'main' function to perform the above program:
