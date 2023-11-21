@@ -46,7 +46,7 @@ void execute(unsigned char nibble4, unsigned char nibble3, unsigned char nibble2
                 PC = PC + (signed char) ((nibble2 << 4) | nibble1);
             }
             break;
-        case 15: // assuming an MSB nibble of 0xF is a STOP instruction
+        case 15: // MSB nibble of 0xF is a STOP instruction
             STOP = 1;
             break;
         default:
@@ -128,7 +128,7 @@ int main() {
         0b1111000000000000
     };
     
-    // The program memory can accept a maximum of 16 8-bit instructions
+    // The program memory can accept a maximum of 256 16-bit instructions
     for (int i = 0; i < (sizeof(program) / sizeof(program[0])); i++) {
         pmem[i] = program[i];
     }
